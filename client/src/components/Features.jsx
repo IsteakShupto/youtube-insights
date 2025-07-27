@@ -1,4 +1,5 @@
 import { Zap, Shield, Users, BarChart3, Clock, Smartphone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Features() {
   const features = [
@@ -74,7 +75,7 @@ export default function Features() {
 
         <div className="text-center mt-16">
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-            Explore All Features
+            <Link to={"/analytics"}>Explore All Features</Link>
           </button>
         </div>
       </div>

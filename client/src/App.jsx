@@ -1,3 +1,4 @@
+import CookieBanner from "./components/CookieBanner";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -12,6 +13,7 @@ function App() {
       <Features />
       <Testimonials />
       <Footer />
+      <CookieBanner />
     </>
   );
 }
