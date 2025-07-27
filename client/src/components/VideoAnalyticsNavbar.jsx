@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router";
 
-export default function Navbar() {
+export default function VideoAnalyticsNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Features", href: "#features" },
-    { name: "Testimonials", href: "#testimonials" },
+    { name: "Home", href: "/" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -22,7 +20,7 @@ export default function Navbar() {
               <span
                 className={`text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent`}
               >
-                Youtube Insights
+                Dashboard
               </span>
             </a>
           </div>
@@ -39,21 +37,6 @@ export default function Navbar() {
                 </a>
               ))}
             </div>
-          </div>
-
-          <div className="hidden md:flex items-center space-x-4">
-            <Link
-              to="/analytics"
-              className={`px-4 py-2 text-sm font-medium transition-colors duration-300 text-gray-700 hover:text-blue-600`}
-            >
-              Sign In
-            </Link>
-            <Link
-              to="/analytics"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-            >
-              Get Started
-            </Link>
           </div>
 
           <div className="md:hidden">
@@ -87,22 +70,6 @@ export default function Navbar() {
               {item.name}
             </a>
           ))}
-          <div className="pt-4 pb-2 border-t border-gray-200">
-            <Link
-              to="/analytics"
-              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
-              onClick={() => setIsOpen(false)}
-            >
-              Sign In
-            </Link>
-            <Link
-              to="/analytics"
-              className="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 mt-2"
-              onClick={() => setIsOpen(false)}
-            >
-              Get Started
-            </Link>
-          </div>
         </div>
       </div>
     </nav>
