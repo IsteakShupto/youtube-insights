@@ -100,7 +100,7 @@ export default function Navbar() {
               className="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 mt-2"
               onClick={() => setIsOpen(false)}
             >
-              Get Started
+              Get your insight
             </Link>
           </div>
         </div>
