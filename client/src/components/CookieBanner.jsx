@@ -19,7 +19,7 @@ export default function CookieBanner() {
   return (
     <div className="fixed bottom-4 left-4 right-4 sm:left-6 sm:right-auto sm:w-[380px] z-50">
       <div className="bg-white text-gray-800 border border-gray-200 rounded-xl px-5 py-4 shadow-lg flex flex-col gap-3">
-        <div className="flex items-start gap-2 text-md text-gray-700 leading-snug">
+        <div className="flex items-start gap-1.5 text-md text-gray-700 leading-snug">
           <AlertTriangle className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
           <span>
             We use cookies to improve your experience. See our{" "}

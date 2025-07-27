@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const insightsRouter = require("./routes/insights/insightsRoute");
+const trendingsRouter = require("./routes/trendings/trendingsRoute");
 
 dotenv.config();
 
@@ -11,6 +12,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cors());
 app.use("/api/yt-insights", insightsRouter);
+app.use("/api/yt-trendings", trendingsRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
