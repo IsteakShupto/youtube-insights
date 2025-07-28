@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { 
-  MessageCircle, 
-  TrendingUp, 
-  TrendingDown, 
-  Minus, 
+import {
+  MessageCircle,
+  TrendingUp,
+  TrendingDown,
+  Minus,
   Brain,
   ThumbsUp,
   ThumbsDown,
   AlertCircle,
   Lightbulb,
-  Users
+  Users,
 } from "lucide-react";
 
 export default function SentimentAnalysis({ videoUrl, isVisible }) {
@@ -19,14 +19,14 @@ export default function SentimentAnalysis({ videoUrl, isVisible }) {
 
   const analyzeSentiment = async () => {
     if (!videoUrl) return;
-    
+
     setIsLoading(true);
     setError("");
     setSentimentData(null);
 
     try {
-      const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
-        
+      const baseUrl = "https://youtube-insights-production.up.railway.app";
+
       const response = await fetch(
         `${baseUrl}/api/sentiment-analysis?url=${encodeURIComponent(videoUrl)}`
       );
@@ -39,7 +39,9 @@ export default function SentimentAnalysis({ videoUrl, isVisible }) {
       }
     } catch (error) {
       console.error("Error al analizar sentimientos:", error);
-      setError("Error de conexión. Verifica que el servidor esté ejecutándose.");
+      setError(
+        "Error de conexión. Verifica que el servidor esté ejecutándose."
+      );
     } finally {
       setIsLoading(false);
     }
@@ -90,9 +92,7 @@ export default function SentimentAnalysis({ videoUrl, isVisible }) {
               <h2 className="text-2xl font-bold text-white">
                 AI Sentiment Analysis
               </h2>
-              <p className="text-purple-100">
-                Powered by Google Gemini
-              </p>
+              <p className="text-purple-100">Powered by Google Gemini</p>
             </div>
           </div>
           <button
@@ -122,14 +122,20 @@ export default function SentimentAnalysis({ videoUrl, isVisible }) {
           <div className="space-y-8">
             {/* Overall Sentiment */}
             <div className="text-center">
-              <div className={`inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r ${getSentimentColor(sentimentData.analysis.overallSentiment)} text-white font-semibold text-lg mb-4`}>
+              <div
+                className={`inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r ${getSentimentColor(
+                  sentimentData.analysis.overallSentiment
+                )} text-white font-semibold text-lg mb-4`}
+              >
                 {getSentimentIcon(sentimentData.analysis.overallSentiment)}
                 <span className="ml-2">
-                  {getSentimentText(sentimentData.analysis.overallSentiment)} Sentiment
+                  {getSentimentText(sentimentData.analysis.overallSentiment)}{" "}
+                  Sentiment
                 </span>
               </div>
               <p className="text-gray-600 text-lg">
-                Score: {(sentimentData.analysis.sentimentScore * 100).toFixed(1)}%
+                Score:{" "}
+                {(sentimentData.analysis.sentimentScore * 100).toFixed(1)}%
               </p>
             </div>
 
@@ -205,12 +211,14 @@ export default function SentimentAnalysis({ videoUrl, isVisible }) {
                 Recommendations
               </h3>
               <ul className="space-y-2">
-                {sentimentData.analysis.recommendations.map((recommendation, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span className="text-gray-700">{recommendation}</span>
-                  </li>
-                ))}
+                {sentimentData.analysis.recommendations.map(
+                  (recommendation, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span className="text-gray-700">{recommendation}</span>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
 
@@ -231,7 +239,10 @@ export default function SentimentAnalysis({ videoUrl, isVisible }) {
               </h3>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 {sentimentData.sampleComments.map((comment, index) => (
-                  <div key={index} className="bg-white p-4 rounded-lg border border-gray-200">
+                  <div
+                    key={index}
+                    className="bg-white p-4 rounded-lg border border-gray-200"
+                  >
                     <div className="flex justify-between items-start mb-2">
                       <span className="font-medium text-gray-900 truncate">
                         {comment.author}
