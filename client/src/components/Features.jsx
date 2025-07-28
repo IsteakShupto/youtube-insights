@@ -1,8 +1,22 @@
-import { Zap, Shield, Users, BarChart3, Clock, Smartphone } from "lucide-react";
+import {
+  Brain,
+  Zap,
+  Shield,
+  Users,
+  BarChart3,
+  Clock,
+  Smartphone,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Features() {
   const features = [
+    {
+      icon: Brain,
+      title: "AI Sentiment Analysis",
+      description:
+        "Automatically understand audience emotions by analyzing video comments and feedback using powerful AI models.",
+    },
     {
       icon: Zap,
       title: "Instant Insights",

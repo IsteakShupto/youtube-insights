@@ -22,7 +22,7 @@ export default function Hero() {
 
           <p className="text-xl sm:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Transform your content with powerful insights. Track performance,
-            grow faster, and stay ahead.
+            understand user sentiments, grow faster, and stay ahead.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
