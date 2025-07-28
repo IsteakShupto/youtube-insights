@@ -68,7 +68,7 @@ export default function VideoAnalytics() {
               ) : (
                 <>
                   <Search className="w-5 h-5 mr-2" />
-                    Analyze
+                  Analyze
                 </>
               )}
             </button>
@@ -94,10 +94,7 @@ export default function VideoAnalytics() {
               comments={videoData.comments}
               engagementRate={videoData.engagementRate}
             />
-            <SentimentAnalysis 
-              videoUrl={searchQuery} 
-              isVisible={true}
-            />
+            <SentimentAnalysis videoUrl={searchQuery} isVisible={true} />
           </div>
         )}
 
@@ -110,8 +107,8 @@ export default function VideoAnalytics() {
               Ready to Analyze
             </h3>
             <p className="text-gray-600 max-w-md mx-auto">
-              Enter a video URL or search query above to get detailed analytics and
-              insights.
+              Enter a video URL or search query above to get detailed analytics
+              and insights and understand human sentiment analysis too.
             </p>
           </div>
         )}

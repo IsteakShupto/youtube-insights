@@ -43,6 +43,13 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-4">
             <Link
+              to="/analytics"
+              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
+            >
+              AI analytics
+            </Link>
+            <Link
               to="/advisor"
               className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
               onClick={() => setIsOpen(false)}
@@ -89,6 +96,13 @@ export default function Navbar() {
             </a>
           ))}
           <div className="pt-4 pb-2 border-t border-gray-200">
+            <Link
+              to="/analytics"
+              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
+            >
+              AI analytics
+            </Link>
             <Link
               to="/advisor"
               className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
