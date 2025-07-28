@@ -155,10 +155,34 @@ You can deploy the application on platforms like **Render**, **Railway**, or **N
 
 ---
 
-## License
+## App screenshots
 
-This project is licensed under the [MIT License](LICENSE).
+![YouTube Insights Banner](./extras/project_images/img-1.png)
+
+![YouTube Insights Banner](./extras/project_images/img-2.png)
+
+![YouTube Insights Banner](./extras/project_images/img-3.png)
+
+![YouTube Insights Banner](./extras/project_images/img-4.png)
+
+![YouTube Insights Banner](./extras/project_images/img-5.png)
+
+![YouTube Insights Banner](./extras/project_images/img-6.png)
+
+![YouTube Insights Banner](./extras/project_images/img-7.png)
 
 ---
 
-Let me know if you also want a `GeminiAdvisor.jsx` component example or auto-deployment scripts for Netlify/Render.
+## Official Collaborators
+
+- [**Isteak Ahammed Shupto**](https://www.linkedin.com/in/shupto006/)
+
+- [**Luis Santiago Sauma Peñaloza**](https://www.linkedin.com/in/santiagosauma/)
+
+- [**Tom Zimmy**](https://www.linkedin.com/in/tomzimny/)
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
