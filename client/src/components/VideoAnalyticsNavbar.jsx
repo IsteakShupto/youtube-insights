@@ -44,6 +44,13 @@ export default function VideoAnalyticsNavbar() {
               >
                 Analytics
               </Link>
+              <Link
+                to={"/advisor"}
+                className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                AI Advisor
+              </Link>
             </div>
           </div>
 
@@ -84,6 +91,13 @@ export default function VideoAnalyticsNavbar() {
             onClick={() => setIsOpen(false)}
           >
             Analytics
+          </Link>
+          <Link
+            to={"/advisor"}
+            className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
+            onClick={() => setIsOpen(false)}
+          >
+            AI Advisor
           </Link>
         </div>
       </div>
