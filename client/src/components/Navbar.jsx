@@ -43,10 +43,11 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              to="/analytics"
-              className={`px-4 py-2 text-sm font-medium transition-colors duration-300 text-gray-700 hover:text-blue-600`}
+              to="/advisor"
+              className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
             >
-              Sign In
+              AI advisor
             </Link>
             <Link
               to="/analytics"
@@ -89,11 +90,11 @@ export default function Navbar() {
           ))}
           <div className="pt-4 pb-2 border-t border-gray-200">
             <Link
-              to="/analytics"
+              to="/advisor"
               className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
               onClick={() => setIsOpen(false)}
             >
-              Sign In
+              AI advisor
             </Link>
             <Link
               to="/analytics"

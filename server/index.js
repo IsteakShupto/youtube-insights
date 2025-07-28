@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const insightsRouter = require("./routes/insights/insightsRoute");
 const trendingsRouter = require("./routes/trendings/trendingsRoute");
 const sentimentRouter = require("./routes/sentiment/sentimentRoute");
+const geminiRouter = require("./routes/ai_seo/geminiRoute");
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(cors());
 app.use("/api/yt-insights", insightsRouter);
 app.use("/api/yt-trendings", trendingsRouter);
 app.use("/api/sentiment-analysis", sentimentRouter);
+app.use("/api/yt-advisor", geminiRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);

@@ -1,4 +1,5 @@
 import { ArrowRight, Play } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -15,7 +16,7 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
             Power up your
             <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              YouTube Insights
+              YouTube Metrics with AI
             </span>
           </h1>
 
@@ -25,14 +26,18 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="group bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25 flex items-center">
-              Get Started Free
-              <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </button>
-            <button className="group bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 backdrop-blur-sm border border-white/20 flex items-center">
-              <Play className="mr-2 w-5 h-5" />
-              Watch Demo
-            </button>
+            <Link to="/analytics">
+              <button className="group bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25 flex items-center">
+                Get Started Free
+                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </button>
+            </Link>
+            <Link to="/analytics">
+              <button className="group bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 backdrop-blur-sm border border-white/20 flex items-center">
+                <Play className="mr-2 w-5 h-5" />
+                Watch Demo
+              </button>
+            </Link>
           </div>
 
           <div className="pt-8">

@@ -5,6 +5,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import VideoAnalytics from "./pages/VideoAnalytics.jsx";
+import AiSeoAdvisor from "./pages/AiSeoAdvisor.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/analytics",
     element: <VideoAnalytics />,
+  },
+  {
+    path: "/advisor",
+    element: <AiSeoAdvisor />,
   },
 ]);
 
