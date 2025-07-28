@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function VideoAnalyticsNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +37,13 @@ export default function VideoAnalyticsNavbar() {
                   {item.name}
                 </a>
               ))}
+              <Link
+                to={"/analytics"}
+                className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Analytics
+              </Link>
             </div>
           </div>
 
@@ -70,6 +78,13 @@ export default function VideoAnalyticsNavbar() {
               {item.name}
             </a>
           ))}
+          <Link
+            to={"/analytics"}
+            className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
+            onClick={() => setIsOpen(false)}
+          >
+            Analytics
+          </Link>
         </div>
       </div>
     </nav>

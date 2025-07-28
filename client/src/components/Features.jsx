@@ -74,9 +74,12 @@ export default function Features() {
         </div>
 
         <div className="text-center mt-16">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-            <Link to={"/analytics"}>Explore All Features</Link>
-          </button>
+          <Link
+            to={"/analytics"}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          >
+            Explore All Features
+          </Link>
         </div>
       </div>
     </section>
