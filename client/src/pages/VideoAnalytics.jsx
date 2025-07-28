@@ -93,8 +93,9 @@ export default function VideoAnalytics() {
               favorites={videoData.favorites}
               comments={videoData.comments}
               engagementRate={videoData.engagementRate}
+              searchQuery={searchQuery}
+              isVisible={true}
             />
-            <SentimentAnalysis videoUrl={searchQuery} isVisible={true} />
           </div>
         )}
 

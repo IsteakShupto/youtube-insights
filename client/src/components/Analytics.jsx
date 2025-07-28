@@ -6,6 +6,7 @@ import {
   Calendar,
   User,
 } from "lucide-react";
+import SentimentAnalysis from "./SentimentAnalysis";
 
 export default function Analytics({
   title,
@@ -17,6 +18,8 @@ export default function Analytics({
   favorites,
   comments,
   engagementRate,
+  searchQuery,
+  isVisible,
 }) {
   const formatNumber = (num) => {
     const number = parseInt(num);
@@ -141,7 +144,9 @@ export default function Analytics({
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <SentimentAnalysis videoUrl={searchQuery} isVisible={isVisible} />
+
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 mt-10">
               <div className="flex justify-center items-center mb-4">
                 <Calendar className="w-5 h-5 text-gray-600 mr-2" />
                 <span className="text-gray-900 font-medium">
