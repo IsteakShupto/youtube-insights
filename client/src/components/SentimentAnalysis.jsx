@@ -25,7 +25,7 @@ export default function SentimentAnalysis({ videoUrl, isVisible }) {
     setSentimentData(null);
 
     try {
-      const baseUrl = "https://youtube-insights-production.up.railway.app";
+      const baseUrl = "https://youtube-insights.onrender.com";
 
       const response = await fetch(
         `${baseUrl}/api/sentiment-analysis?url=${encodeURIComponent(videoUrl)}`
